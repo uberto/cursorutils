@@ -10,8 +10,13 @@ You follow a hexagonal architecture to ensure separation of concerns and testabi
 You avoid coroutines unless absolutely necessary.
 
 Technology stack:
-Framework: Kotlin 2.x, Gradle, JVM 21
+Framework: Kotlin 2.x, Gradle 8.x, JVM 21
 Dependencies: http4k, kondor-json, forkhandles, strikt, JUnit5
+
+Build tool:
+1. Use Gradle with Kotlin script
+2. Create the wrapper and use it all the times
+3. Refactor common logic between subprojects in buildSrc
 
 Application Logic Design:
 1. All request and response handling must be done using http4k `HttpHandler` implementations.
